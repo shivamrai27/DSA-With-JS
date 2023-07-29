@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Array Traversing</title>
+<script>
+    let a = [2,3,76,34,23,12,6,7,23];
+    for (let i = 0; i < a.length; i++){
+        document.write(`Index: ${[i]}, Element: ${a[i]} <br>`);
+    }
+
+function elemFind(){
+    
+    let el = document.getElementById('el').value;
+    if(el>0 && el<a.length){
+        alert(`Element is: ${a[el]}`);
+    }else{
+        alert('Please enter valid input');
+    }
+    
+}
+</script>
+</head>
+<body>
+    <br><br>
+    <input type="text" id="el" placeholder="Enter the Index" >
+    <button onclick="elemFind()">Check Number</button>
+</body>
+</html>

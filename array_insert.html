@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Array Insert</title>
+    <script>
+        let data = [21, 23, 4, 45, 34];
+        // let newEl = el;
+        // let pos = pos;
+        document.write(`${data} <br> <br>`)
+
+        function insert() {
+            let newEl = document.getElementById('el').value;
+            let pos = document.getElementById('pos').value;
+            for (
+                let i = data.length - 1; i >= 0; i--) {
+                // console.warn(data[i])
+                if (i >= pos) {
+                    data[i + 1] = data[i];
+                    if (i == pos) {
+                        data[i] = newEl;
+                    }
+                }
+            }
+            document.write(`${data} <br> <br>`)
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="el" placeholder="Enter Element">
+    <input type="text" id="pos" placeholder="Enter position">
+    <button onclick="insert()">Insert</button>
+</body>
+
+</html>
